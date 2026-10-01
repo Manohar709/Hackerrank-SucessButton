@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Sprinkler</title>
+    
+    <!-- 1. Import the Confetti Library from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <style>
+        /* Basic Page Styling */
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1e293b; /* Dark slate background */
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* The HackerRank Style Button */
+        .hr-button {
+            background-color: #00b862; /* HackerRank Green */
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 4px; /* Sharp corners like HR */
+            cursor: pointer;
+            transition: background-color 0.2s;
+            /* Slight shadow */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
+        }
+
+        .hr-button:hover {
+            background-color: #009a53; /* Darker green on hover */
+        }
+
+        .hr-button:active {
+            transform: translateY(1px); /* Press effect */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 2. The Button -->
+    <button class="hr-button" onclick="runAndCelebrate()">Run Code</button>
+
+    <!-- 3. The JavaScript to trigger the sprinkler -->
+    <script>
+        function runAndCelebrate() {
+            // -- OPTIONAL: Pretend code is running --
+            // You could add logic here to actually check code,
+            // but for this example, we just go straight to celebration.
+            
+            // -- The Sprinkler (Confetti) Effect --
+            confetti({
+                particleCount: 150, // How many pieces
+                spread: 100,         // How wide it sprays
+                origin: { y: 0.6 }, // Sprays from slightly below top edge
+                colors: ['#ff0000', '#00ff00', '#0000ff', '#ffff00'] // Custom colors
+            });
+
+            // Optional browser alert (you can remove this)
+            // alert("Success! Your code passed all tests.");
+        }
+    </script>
+
+</body>
+</html>
